@@ -12,7 +12,8 @@ import { ConnectionCode } from './components/ConnectionCode';
 import { FileRequestDialog } from './components/FileRequestDialog';
 import { FileDownload, FileInfo } from './components/FileDownload';
 
-const SIGNALING_SERVER_URL = 'ws://localhost:8080';
+//const SIGNALING_SERVER_URL = 'ws://localhost:8080';
+const SIGNALING_SERVER_URL = 'wss://web-production-c7d71.up.railway.app/';
 
 // App state interface
 interface AppState {
