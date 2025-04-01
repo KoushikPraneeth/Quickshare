@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000 0%, #111 100%);
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Apple-inspired styles */
+.apple-gradient-dark {
+  background: linear-gradient(to bottom, #000 0%, #111 100%);
+}
+
+.apple-text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #fff, #f0f0f0);
+}
+
+.apple-glow {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.landing-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 2rem 3rem;
+  text-align: center;
+}
+
+.landing-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #fff, #f0f0f0);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.landing-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.role-selection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 42rem;
+  margin: 2rem auto 0;
+}
+
+@media (min-width: 768px) {
+  .role-selection {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.role-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.role-card:hover::before {
+  opacity: 1;
+}
+
+.role-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.role-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.role-card h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.role-card p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+.role-card .get-started {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: auto;
+}
+
+.role-card:hover .get-started {
+  color: white;
+}
